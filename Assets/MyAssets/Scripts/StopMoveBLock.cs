@@ -11,8 +11,8 @@ public class StopMoveBLock : MonoBehaviour
         
         if (other.gameObject.tag == "RedBlock")
         {
-            CamShake camShake = FindObjectOfType<CamShake>();
-            camShake.Shake();
+           // CamShake camShake = FindObjectOfType<CamShake>();
+            //camShake.Shake();
             transform.parent = other.gameObject.transform;
         }
     }

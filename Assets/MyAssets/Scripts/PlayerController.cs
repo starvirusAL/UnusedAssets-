@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
 
     public TouchPad touchPad;
 
-    void FixedUpdate()
+    void Update()
     {
         MovePlayerTower(isActive);
 
@@ -19,8 +19,8 @@ public class PlayerController : MonoBehaviour
 
     void MovePlayerTower(bool isActive)
     {
-        if (isActive)
-        {
+        
+        
             Vector2 direction = touchPad.GetDirection();
             float xOffset = direction.x * Time.deltaTime * speed;
             float newXpos = transform.localPosition.x + xOffset;
@@ -28,7 +28,7 @@ public class PlayerController : MonoBehaviour
 
 
             transform.localPosition = new Vector3(xMove, transform.localPosition.y, transform.localPosition.z);
-        }
+        
     }
 
 
